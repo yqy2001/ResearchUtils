@@ -52,3 +52,13 @@ scroll screen:
 效果如下：
 
 ![image-20211023103016798](README.assets/image-20211023103016798.png)
+
+### Debug distributed program:
+
+https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003879119-how-to-run-python-m-command-in-pycharm-
+
+命令行运行如下：`python -m torch.distributed.launch --nproc_per_node=1 main_swav.py --data_path cifar10 --nmb_crops 2`
+
+在pycharm debug时，和普通debug不同，需要直接指定Module name，启动`torch.distributed.lauch`这个Module，其他的所有都放到Parameters里：
+
+![image-20211023170826140](README.assets/image-20211023170826140.png)
