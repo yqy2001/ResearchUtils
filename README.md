@@ -7,6 +7,10 @@ Really not easy to search and look at my CSDN blogs. Directly use Github+.md to 
 * tmux
 * pycharm
 
+## linux
+
+du -h: 查看各文件夹大小
+
 ## apex
 
 apex是一个非常好用的NVIDIA官方加速包：https://github.com/NVIDIA/apex
@@ -62,3 +66,17 @@ https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003879119-how
 在pycharm debug时，和普通debug不同，需要直接指定Module name，启动`torch.distributed.lauch`这个Module，其他的所有都放到Parameters里：
 
 ![image-20211023170826140](README.assets/image-20211023170826140.png)
+
+## LaTeX
+
+`\left(` and `\right(` can make scale. 
+$$
+\left(1+\frac{1}{n}\right)^n
+$$
+$\to\infty \sqrt[n]{n!}$
+
+\begin{enumerate}
+
+\end{enumerate}
+
+More usage of LaTeX is recorded on AIR's private overleaf: https://103.242.175.166:9099, in "Hello LaTeX" project.
