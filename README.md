@@ -11,6 +11,33 @@ Really not easy to search and look at my CSDN blogs. Directly use Github+.md to 
 
 du -h: 查看各文件夹大小
 
+**添加到环境变量`$PATH`：**
+When we type a command, the shell searches through all directories specified in the user`$PATH` variable for an executable file of that name.
+
+编辑`~/.bashrc`文件，在其中加入如下命令：
+
+```sh
+export PATH="$HOME/bin:$PATH"
+```
+
+Save the file and load the new `$PATH` into the current shell session using the `source` command:
+
+```sh
+source ~/.bashrc
+```
+
+**Install zsh:**
+
+https://github.com/ohmyzsh/ohmyzsh
+
+https://github.com/powerline/fonts
+
+zsh bira配置：
+
+先`conda config --set changeps1 False`取消掉默认环境显示
+
+[修改 oh-my-zsh 主题使其正确显示 Conda 环境信息 - Glowming - 博客园 (cnblogs.com)](https://www.cnblogs.com/glowming/p/display-conda-env-name-in-zsh.html)
+
 ## apex
 
 apex是一个非常好用的NVIDIA官方加速包：https://github.com/NVIDIA/apex
