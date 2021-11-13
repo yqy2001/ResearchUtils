@@ -62,3 +62,13 @@ https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003879119-how
 在pycharm debug时，和普通debug不同，需要直接指定Module name，启动`torch.distributed.lauch`这个Module，其他的所有都放到Parameters里：
 
 ![image-20211023170826140](README.assets/image-20211023170826140.png)
+
+## Mac
+
+我的 MacBook Pro 16 终于来了！我的好兄弟，即将陪我度过人生中最重要的五年，跟我一起并肩战斗，在此记录对你的使用。
+
+基于UNIX内核的系统yyds！命令行+简易图形化界面的操作逻辑yyds！
+
+Homebrew安装: https://brew.sh/
+
+brew安装wget: `brew install wget`
