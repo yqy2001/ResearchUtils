@@ -42,11 +42,11 @@ zsh bira配置：
 
 apex是一个非常好用的NVIDIA官方加速包：https://github.com/NVIDIA/apex
 
-apex严格的需要两个cuda版本对应，否则会出问题：本机CUDA版本(编译apex的cuda版本)和编译Pytorch的cuda版本，我之前使用CUDA11.4和Pytorch1.9+cu111就不行，因为Pytorch1.9对应的CUDA11.1。
+apex严格的需要两个cuda版本对应，否则会出问题：本机CUDA版本(编译apex的cuda版本)和编译Pytorch的cuda版本，我之前使用CUDA11.4和Pytorch1.9+cu111就不行，因为Pytorch1.9对应的CUDA11.1，和本机的CUDA11.4对不上。
 
-对应不上的一个解决方法是把setup.py里面check版本对应的一行代码给注释掉，这样可以安装了，但后续使用可能会出问题。
+对应不上的一个解决方法是把setup.py里面check版本对应的一行代码给注释掉（看装不上是setup.py文件的哪一行报错，我是159行的函数），这样就可以安装了，但后续使用可能会出问题。如果两个CUDA版本差别较小一般不会出问题。
 
-终于他妈的把APEX搞好了
+终于他妈的把APEX搞好了！
 
 ## pip / conda 恢复默认源
 
@@ -74,7 +74,15 @@ scroll screen:
 
 `Ctrl`-`b` then `[` then you can use your normal navigation keys to scroll around (eg. `Up Arrow` or `PgDn`). Press `q` to quit scroll mode.
 
+Tmux window keeps renaming: https://stackoverflow.com/questions/6041178/keep-the-windows-name-fixed-in-tmux
+
 ## Pycharm
+
+### 建立SSH连接
+
+https://www.jetbrains.com/help/pycharm/2021.1/create-ssh-configurations.html?keymap=primary_windows
+
+自动上传：https://www.jetbrains.com/help/pycharm/2021.1/uploading-and-downloading-files.html#automaticUploadOnUpdate
 
 在pycharm中给python解释器加可选项以及给.py脚本加参数：
 
@@ -93,6 +101,10 @@ https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003879119-how
 在pycharm debug时，和普通debug不同，需要直接指定Module name，启动`torch.distributed.lauch`这个Module，其他的所有都放到Parameters里：
 
 ![image-20211023170826140](README.assets/image-20211023170826140.png)
+
+连接远程服务器Debug经常de不动，在Setting里把这个选上：
+
+![img](README.assets/4YS2{8X``}D5Y7SZNBW0YB.png)
 
 ## LaTeX
 
