@@ -106,6 +106,20 @@ https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003879119-how
 
 ![img](README.assets/4YS2{8X``}D5Y7SZNBW0YB.png)
 
+## LaTeX
+
+`\left(` and `\right(` can make scale. 
+$$
+\left(1+\frac{1}{n}\right)^n
+$$
+$\to\infty \sqrt[n]{n!}$
+
+\begin{enumerate}
+
+\end{enumerate}
+
+### More usage of LaTeX is recorded on AIR's private overleaf: https://103.242.175.166:9099, in "Hello LaTeX" project.
+
 ## Mac
 
 我的 MacBook Pro 16 终于来了！我的好兄弟，即将陪我度过人生中最重要的五年，跟我一起并肩战斗，在此记录对你的使用。
@@ -115,4 +129,3 @@ https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003879119-how
 Homebrew安装: https://brew.sh/
 
 brew安装wget: `brew install wget`
->>>>>>> a9a1e716bd7ce6426c26359fe656e8424c4f75d0
