@@ -129,3 +129,7 @@ $\to\infty \sqrt[n]{n!}$
 Homebrew安装: https://brew.sh/
 
 brew安装wget: `brew install wget`
+
+Powerline fonts installed to /Users/yuqiying/Library/Fonts
+
+配置ssh免密：ssh-copy-id -p 22 yuqy@103.242.175.247
