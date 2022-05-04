@@ -2,14 +2,17 @@
 
 Really not easy to search and look at my CSDN blogs. Directly use Github+.md to record my use of all kinds of utils.
 
+* Linux
 * apex
 * pip / conda
 * tmux
 * pycharm
 
-## linux
+## Linux
 
 du -h: 查看各文件夹大小
+
+whereis / which 查看某命令的路径
 
 **添加到环境变量`$PATH`：**
 When we type a command, the shell searches through all directories specified in the user`$PATH` variable for an executable file of that name.
@@ -38,6 +41,12 @@ zsh bira配置：
 
 [修改 oh-my-zsh 主题使其正确显示 Conda 环境信息 - Glowming - 博客园 (cnblogs.com)](https://www.cnblogs.com/glowming/p/display-conda-env-name-in-zsh.html)
 
+
+
+ssh:
+
+免密登陆：`ssh-copy-id user@$HOST`，登录一次后以后再ssh就不用输入密码了
+
 ## apex
 
 apex是一个非常好用的NVIDIA官方加速包：https://github.com/NVIDIA/apex
@@ -48,13 +57,42 @@ apex严格的需要两个cuda版本对应，否则会出问题：本机CUDA版�
 
 终于他妈的把APEX搞好了！
 
-## pip / conda 恢复默认源
+## pip / conda
+
+In order to initialize after the installation process is done, first run `source <path to conda>/bin/activate` and then run `conda init`.
+
+### Conda 环境迁移：
+
+Exporting the current environment to the `env.yml` file:
+
+```
+conda activate $env
+conda env export > $env.yml
+```
+
+On the other system, create the environment from the `env.yml` file:
+
+```shell
+conda env create -f $env.yaml
+```
+
+The first line of the yml file sets the new environment's name.
+
+
+
+离线环境迁移，不需要重装：
+
+https://blog.csdn.net/weixin_40304882/article/details/116309131
+
+### 恢复默认源: 
 
 进入pip配置文件夹：`cd ~/.config/pip`
 
 打开pip.conf，将里面的内容删掉或者用#注释掉
 
 conda直接输入：`conda config --remove-key channels`
+
+
 
 ## Tmux
 
@@ -96,6 +134,8 @@ https://www.jetbrains.com/help/pycharm/2021.1/create-ssh-configurations.html?key
 
 https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003879119-how-to-run-python-m-command-in-pycharm-
 
+分布式训练出现错误：“RuntimeError: Address already in use”：加上`--master_port 29501`
+
 命令行运行如下：`python -m torch.distributed.launch --nproc_per_node=1 main_swav.py --data_path cifar10 --nmb_crops 2`
 
 在pycharm debug时，和普通debug不同，需要直接指定Module name，启动`torch.distributed.lauch`这个Module，其他的所有都放到Parameters里：
@@ -122,7 +162,7 @@ $\to\infty \sqrt[n]{n!}$
 
 ## Mac
 
-我的 MacBook Pro 16 终于来了！我的好兄弟，即将陪我度过人生中最重要的五年，跟我一起并肩战斗，在此记录对你的使用。
+我的 MacBook Pro 16 终于来了！即将陪我度过人生中最重要的五年，跟我一起并肩战斗，在此记录使用。
 
 基于UNIX内核的系统yyds！命令行+简易图形化界面的操作逻辑yyds！
 
@@ -131,5 +171,3 @@ Homebrew安装: https://brew.sh/
 brew安装wget: `brew install wget`
 
 Powerline fonts installed to /Users/yuqiying/Library/Fonts
-
-配置ssh免密：ssh-copy-id -p 22 yuqy@103.242.175.247
