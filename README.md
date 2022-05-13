@@ -61,6 +61,10 @@ apex严格的需要两个cuda版本对应，否则会出问题：本机CUDA版�
 
 In order to initialize after the installation process is done, first run `source <path to conda>/bin/activate` and then run `conda init`.
 
+```
+conda create -n $ENV_NAME python=3.8
+```
+
 ### Conda 环境迁移：
 
 Exporting the current environment to the `env.yml` file:
