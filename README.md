@@ -47,6 +47,17 @@ ssh:
 
 免密登陆：`ssh-copy-id user@$HOST`，登录一次后以后再ssh就不用输入密码了
 
+
+
+
+
+gdown: 
+从google drive下载大文件：
+
+```shell
+gdown [link] --fuzzy
+```
+
 ## apex
 
 apex是一个非常好用的NVIDIA官方加速包：https://github.com/NVIDIA/apex

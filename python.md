@@ -1,3 +1,13 @@
+文件路径操作：
+
+获取当前用户家目录路径：`os.environ['HOME']`或者`os.path.expanduser("~")`
+
+判断路径是否存在：`os.path.exists("/home/")`
+
+`os.listdir()`: 列出目录下所有文件名
+
+`os.path.join`: 拼接
+
 `os.getlogin()`: 获取当前登录用户名
 
 `os.mkdirs`
