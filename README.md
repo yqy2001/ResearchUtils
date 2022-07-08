@@ -29,6 +29,28 @@ Save the file and load the new `$PATH` into the current shell session using the 
 source ~/.bashrc
 ```
 
+### Environment Variables:
+
+```shell
+export MY_VAR="my var"
+```
+
+Variables created in this way are only available in the current session. In a new session, all variables will be lost.
+
+**Persistent environment variables:**
+
+To make Environment variables persistent you need to define those variables in the bash configuration files. For example, if you are using Bash, you can declare the variables in the `~/.bashrc`:
+
+```shell
+export PATH="$HOME/bin:$PATH"
+```
+
+To load the new environment variables into the current shell session use the source command to refresh the bash configuration:
+
+```shell
+source ~/.bashrc
+```
+
 **Install zsh:**
 
 https://github.com/ohmyzsh/ohmyzsh
