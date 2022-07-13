@@ -1,3 +1,14 @@
+## 关于内存占用
+
+查看tensor所占内存大小，`element_size()`每个元素所占字节数，`nelement()`元素个数。
+
+```python
+a = torch.zeros([128, 128])
+print(a.element_size() * a.nelement())
+```
+
+int32和float32一般都占4字节，float64是8字节
+
 ## DistributedDataParallel
 
 运行：

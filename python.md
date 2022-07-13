@@ -20,7 +20,7 @@ import pickle
 acc = [['1', '2', '3'], ['a', 'b', 'c']]
 # write / dump
 with open('acc_file', 'wb') as f:
-    pickle.dump(f, acc)
+    pickle.dump(acc, f)
 # read / load
 with open('acc_file', 'rb') as f:
     a = pickle.load(f)
